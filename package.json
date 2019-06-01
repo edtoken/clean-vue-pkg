@@ -1,0 +1,61 @@
+{
+  "name": "clean-vue-pkg",
+  "version": "0.0.1",
+  "description": "Very simple javascript package to help to configure the npm",
+  "main": "dist/clean-vue-pkg.umd.js",
+  "module": "dist/clean-vue-pkg.esm.js",
+  "unpkg": "dist/clean-vue-pkg.min.js",
+  "browser": {
+    "./sfc": "src/main.js"
+  },
+  "repository": "https://github.com/edtoken/clean-vue-pkg",
+  "keywords": [
+    "npm starter kit",
+    "javascript starter kit",
+    "starter kit",
+    "javascript package",
+    "clean javascript package",
+    "publish package",
+    "publish javascript package"
+  ],
+  "files": [
+    "dist"
+  ],
+  "author": "Eduard Titov <editied@gmail.com>",
+  "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://raw.githubusercontent.com/edtoken/clean-vue-pkg/master/LICENSE"
+    }
+  ],
+  "scripts": {
+    "test": "nyc --reporter=lcov --reporter=html --reporter=text-summary mocha --opts ./mocha.opts"
+  },
+  "nyc": {
+    "watermarks": {
+      "lines": [
+        80,
+        95
+      ],
+      "functions": [
+        80,
+        95
+      ],
+      "branches": [
+        80,
+        95
+      ],
+      "statements": [
+        80,
+        95
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "dotenv": "^8.0.0",
+    "mocha": "^6.1.4",
+    "nyc": "^14.1.1"
+  }
+}
